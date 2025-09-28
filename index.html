@@ -696,6 +696,19 @@
             outline: 2px solid #000000;
             outline-offset: 2px;
         }
+
+        /* Quantity selector hover effects */
+        #decrease-qty:hover,
+        #increase-qty:hover {
+            background: #000 !important;
+            color: white !important;
+            transform: scale(1.05);
+        }
+
+        #decrease-qty:active,
+        #increase-qty:active {
+            transform: scale(0.95);
+        }
     </style>
 </head>
 
@@ -860,11 +873,21 @@
                 <div class="pricing-card fade-up">
                     <div class="pricing-badge">Premium Access</div>
                     <h3 class="pricing-title">U.S. Based TikTok Account</h3>
-                    <div class="pricing-price">$20</div>
-                    <p class="pricing-period">per account</p>
+                    <div class="pricing-price" id="total-price">$20</div>
+                    <p class="pricing-period" id="price-period">per account</p>
                     
+                    <div class="quantity-selector" style="margin: 32px 0 24px 0;">
+                        <div style="display: flex; align-items: center; justify-content: center; background: #f8f8f8; border-radius: 12px; padding: 4px; width: fit-content; margin: 0 auto;">
+                            <button type="button" id="decrease-qty" style="width: 36px; height: 36px; border: none; background: transparent; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: 300; display: flex; align-items: center; justify-content: center; transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1); color: #666;">−</button>
+                            <div style="width: 60px; text-align: center; padding: 8px 12px; font-size: 16px; font-weight: 500; color: #000; background: white; border-radius: 8px; margin: 0 4px; min-height: 20px; display: flex; align-items: center; justify-content: center;">
+                                <span id="quantity-display">1</span>
+                            </div>
+                            <button type="button" id="increase-qty" style="width: 36px; height: 36px; border: none; background: transparent; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: 300; display: flex; align-items: center; justify-content: center; transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1); color: #666;">+</button>
+                        </div>
+                        <input type="number" id="quantity" value="1" min="1" max="21" style="display: none;">
+                    </div>
                     
-                    <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                    <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" class="btn btn-primary btn-lg" id="buy-now-btn" target="_blank" rel="noopener noreferrer">Buy Now</a>
                 </div>
             </div>
         </section>
@@ -935,6 +958,51 @@
             steps.forEach((step, index) => {
                 step.style.transitionDelay = `${index * 0.15}s`;
             });
+
+            // Quantity counter functionality
+            const quantityInput = document.getElementById('quantity');
+            const quantityDisplay = document.getElementById('quantity-display');
+            const decreaseBtn = document.getElementById('decrease-qty');
+            const increaseBtn = document.getElementById('increase-qty');
+            const totalPrice = document.getElementById('total-price');
+            const pricePeriod = document.getElementById('price-period');
+
+            const pricePerAccount = 20;
+
+            function updatePrice() {
+                const quantity = parseInt(quantityInput.value);
+                const total = quantity * pricePerAccount;
+                
+                totalPrice.textContent = `$${total}`;
+                quantityDisplay.textContent = quantity;
+                
+                if (quantity === 1) {
+                    pricePeriod.textContent = 'per account';
+                } else {
+                    pricePeriod.textContent = `for ${quantity} accounts`;
+                }
+            }
+
+            if (decreaseBtn && increaseBtn && quantityInput && quantityDisplay) {
+                decreaseBtn.addEventListener('click', () => {
+                    const currentValue = parseInt(quantityInput.value);
+                    if (currentValue > 1) {
+                        quantityInput.value = currentValue - 1;
+                        updatePrice();
+                    }
+                });
+
+                increaseBtn.addEventListener('click', () => {
+                    const currentValue = parseInt(quantityInput.value);
+                    if (currentValue < 21) {
+                        quantityInput.value = currentValue + 1;
+                        updatePrice();
+                    }
+                });
+
+                // Initialize price
+                updatePrice();
+            }
         });
     </script>
 </body>
