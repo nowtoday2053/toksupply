@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
     
     <style>
         /* ===== RESET & BASE ===== */
@@ -179,37 +180,107 @@
         }
 
         .btn-lg {
-            padding: 16px 32px;
-            font-size: 16px;
+            padding: 14px 28px;
+            font-size: 15px;
+            font-weight: 600;
         }
 
         /* ===== HERO SECTION ===== */
         .hero {
             padding: 160px 0 120px;
-            text-align: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-text {
+            text-align: left;
+            padding-right: 120px;
+            margin-left: -40px;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                padding-left: 0;
+            }
+
+            @media (max-width: 768px) {
+                .hero-visual {
+                    justify-content: center;
+                    padding-left: 0;
+                }
+        }
+
+        .analytics-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 900px;
+            align-items: start;
+        }
+
+        .analytics-card {
+            background: transparent;
+            border: none;
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            min-height: auto;
+        }
+
+        .analytics-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .analytics-card:first-child {
+            transform: rotate(-1deg);
+        }
+
+        .analytics-card:last-child {
+            transform: rotate(1deg);
+        }
+
+        .analytics-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            image-rendering: auto;
+            object-fit: contain;
+            flex: 1;
+            transform: scale(1.8);
+            transform-origin: center;
         }
 
         .hero-headline {
-            font-size: clamp(36px, 5vw, 60px);
+            font-size: clamp(32px, 4.5vw, 48px);
             font-weight: 700;
             line-height: 1.1;
             letter-spacing: -0.02em;
-            margin-bottom: 24px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 28px;
+            max-width: 100%;
         }
 
         .hero-subheadline {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: clamp(18px, 2.5vw, 22px);
+            font-size: clamp(20px, 2.8vw, 24px);
             font-weight: 300;
             line-height: 1.4;
             color: #000000;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 48px;
+            max-width: 100%;
         }
 
         .hero-metrics {
@@ -223,9 +294,11 @@
 
         .hero-buttons {
             display: flex;
-            justify-content: center;
-            gap: 16px;
+            gap: 20px;
             flex-wrap: wrap;
+            align-items: center;
+            margin-left: 0px;
+            margin-top: -20px;
         }
 
         .metric {
@@ -462,9 +535,9 @@
 
         .pricing-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 32px;
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 64px auto 0;
         }
 
@@ -488,8 +561,8 @@
             right: -30px;
             background: #ff4444;
             color: white;
-            padding: 8px 40px;
-            font-size: 14px;
+            padding: 6px 28px;
+            font-size: 12px;
             font-weight: 700;
             transform: rotate(45deg);
             z-index: 10;
@@ -657,10 +730,38 @@
             transform: translateY(0);
         }
 
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
+            }
+
+            .nav-cta {
+                margin-left: 0;
+            }
+
+            .nav-cta .btn {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+
+            .nav-logo img {
+                height: 70px !important;
+                margin-right: -8px !important;
+            }
+
+            .nav-logo {
+                font-size: 16px;
             }
 
             .container {
@@ -681,6 +782,55 @@
 
             .hero {
                 padding: 120px 0 80px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 48px;
+                text-align: center;
+            }
+
+            .hero-text {
+                text-align: center;
+                padding-right: 0;
+                margin-left: 0;
+            }
+
+            .analytics-showcase {
+                max-width: 100%;
+                grid-template-columns: 1fr;
+                gap: 16px;
+                padding: 0 16px;
+            }
+
+            .analytics-image {
+                transform: scale(0.9);
+                width: 100%;
+                height: auto;
+            }
+
+            .analytics-card:first-child,
+            .analytics-card:last-child {
+                transform: none;
+            }
+
+            .analytics-image {
+                min-height: 250px;
+            }
+
+            .hero-headline {
+                font-size: clamp(28px, 6vw, 36px);
+                margin-bottom: 20px;
+            }
+
+            .hero-subheadline {
+                font-size: clamp(18px, 4vw, 20px);
+                margin-bottom: 32px;
+            }
+
+            .hero-buttons {
+                gap: 16px;
+                justify-content: center;
             }
 
             .hero-metrics {
@@ -708,7 +858,20 @@
             }
 
             .pricing-card {
-                padding: 32px;
+                padding: 24px;
+            }
+
+            .pricing-badge {
+                font-size: 11px;
+                padding: 6px 16px;
+            }
+
+            .pricing-title {
+                font-size: 20px;
+            }
+
+            .pricing-price {
+                font-size: 36px;
             }
 
             .affiliate-content {
@@ -748,6 +911,27 @@
             outline-offset: 2px;
         }
 
+        /* Affiliate modal */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+        }
+        .modal {
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 520px;
+            padding: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .modal-actions { display:flex; gap:8px; }
+
         /* Quantity selector hover effects */
         #decrease-qty:hover,
         #increase-qty:hover {
@@ -761,19 +945,20 @@
             transform: scale(0.95);
         }
     </style>
-    <script async src="https://cdn.tolt.io/tolt.js" data-tolt="pk_kf3ja1ACbckoJVyqJYtxCaYn"></script>
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">TokSupply</a>
+            <a href="#home" class="nav-logo">
+                <img src="logo.png" alt="TokSupply Logo" style="height: 75px; margin-right: 8px; vertical-align: middle;">
+                TokSupply
+            </a>
             <ul class="nav-menu">
                 <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
                 <li><a href="#social-proof" class="nav-link">Reviews</a></li>
-                <li><a href="#affiliate" class="nav-link">Affiliate</a></li>
             </ul>
             <div class="nav-cta">
                 <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
@@ -785,14 +970,27 @@
         <!-- Hero Section -->
         <section class="hero section-lg" id="home">
             <div class="container">
-                <h1 class="hero-headline">Get 100K+ Views on Your Next TikTok Video</h1>
-                <p class="hero-subheadline">Stop getting 200 views from the wrong audience.<br>Start getting 200k views from people who actually buy.</p>
-                
-                
-
-                <div class="hero-buttons">
-                    <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Buy Now</a>
-                    <a href="#social-proof" class="btn btn-secondary btn-lg">See Proof</a>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-headline">Get 100K+ Views on<br>Your Next TikTok Video.</h1>
+                        <p class="hero-subheadline">Stop getting 200 views from the wrong audience. Start getting 200k views from people who actually buy.</p>
+                        
+                        <div class="hero-buttons">
+                            <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                            <a href="#social-proof" class="btn btn-secondary btn-lg">See Proof</a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual">
+                        <div class="analytics-showcase">
+                            <div class="analytics-card">
+                                <img src="analytics1.jpg" alt="TikTok Analytics Dashboard" class="analytics-image">
+                            </div>
+                            <div class="analytics-card">
+                                <img src="analytics2.jpg" alt="TikTok Performance Metrics" class="analytics-image">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -870,6 +1068,39 @@
                         </div>
                         <p class="testimonial-quote">"I was using VPNs, eSims, and burner phones but they weren't targeting the US fyp page. I tried TokSupply and my first video got 173K views lol."</p>
                     </div>
+                    
+                    <div class="testimonial fade-up">
+                        <div class="testimonial-author">
+                            <img src="dev mehta.jpg" alt="Dev Mehta" class="author-avatar-img">
+                            <div class="author-info">
+                                <h4><a href="#" target="_blank" rel="noopener noreferrer">Dev Mehta</a></h4>
+                                <p>Brand Builder</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-quote">"TokSupply changed everything for my business. Went from 2.6k views to 285k in just one week. The US algorithm is absolutely insane compared to international accounts."</p>
+                    </div>
+                    
+                    <div class="testimonial fade-up">
+                        <div class="testimonial-author">
+                            <img src="mik.jpg" alt="Mike Rodriguez" class="author-avatar-img">
+                            <div class="author-info">
+                                <h4><a href="#" target="_blank" rel="noopener noreferrer">Mike Rodriguez</a></h4>
+                                <p>E-commerce Entrepreneur</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-quote">"Best investment I've made for my brand. My TikTok went from 1K followers to 50K in 2 months with TokSupply. The engagement rate is through the roof!"</p>
+                    </div>
+                    
+                    <div class="testimonial fade-up">
+                        <div class="testimonial-author">
+                            <img src="alex.jpg" alt="Alex Liu" class="author-avatar-img">
+                            <div class="author-info">
+                                <h4><a href="#" target="_blank" rel="noopener noreferrer">Alex Liu</a></h4>
+                                <p>Digital Marketer</p>
+                            </div>
+                        </div>
+                        <p class="testimonial-quote">"I was skeptical at first, but TokSupply delivered exactly what they promised. My content now consistently hits 100K+ views. Worth every penny!"</p>
+                    </div>
                 </div>
                 
             </div>
@@ -905,7 +1136,7 @@
         <!-- Pricing Section -->
         <section class="pricing section" id="pricing">
             <div class="container">
-                <h2 class="text-3xl font-bold mb-4" style="text-align: center;">Only 11 accounts left this week</h2>
+                <h2 class="text-3xl font-bold mb-4" style="text-align: center;">Only 11 Accounts Left This Week</h2>
                 
                 <div class="pricing-container">
                     <div class="pricing-card fade-up">
@@ -914,16 +1145,6 @@
                         <div class="pricing-price" id="total-price">$20</div>
                         <p class="pricing-period" id="price-period">per account</p>
                         
-                        <div class="quantity-selector" style="margin: 32px 0 24px 0;">
-                            <div style="display: flex; align-items: center; justify-content: center; background: #f8f8f8; border-radius: 12px; padding: 4px; width: fit-content; margin: 0 auto;">
-                                <button type="button" id="decrease-qty" style="width: 36px; height: 36px; border: none; background: transparent; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: 300; display: flex; align-items: center; justify-content: center; transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1); color: #666;">−</button>
-                                <div style="width: 60px; text-align: center; padding: 8px 12px; font-size: 16px; font-weight: 500; color: #000; background: white; border-radius: 8px; margin: 0 4px; min-height: 20px; display: flex; align-items: center; justify-content: center;">
-                                    <span id="quantity-display">1</span>
-                                </div>
-                                <button type="button" id="increase-qty" style="width: 36px; height: 36px; border: none; background: transparent; border-radius: 8px; cursor: pointer; font-size: 18px; font-weight: 300; display: flex; align-items: center; justify-content: center; transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1); color: #666;">+</button>
-                            </div>
-                            <input type="number" id="quantity" value="1" min="1" max="21" style="display: none;">
-                        </div>
                         
                         <ul class="pricing-features">
                             <li>U.S. Based TikTok Account</li>
@@ -939,43 +1160,40 @@
                         <div class="pricing-badge">Best Value</div>
                         <div class="discount-banner">50% OFF</div>
                         <h3 class="pricing-title">Bulk Package</h3>
-                        <div class="pricing-price">$100</div>
+                        <div class="pricing-price" style="text-align: center; margin: 0 auto;">$100</div>
                         <p class="pricing-period">for 10 accounts</p>
                         
-                        <ul class="pricing-features" style="margin-top: 108px;">
+                        <ul class="pricing-features" style="margin-top: 45px;">
                             <li>10 U.S. Based TikTok Accounts</li>
                             <li>Same quality as individual accounts</li>
                             <li>Perfect for agencies & teams</li>
                             <li>Save $100 compared to buying individually</li>
                         </ul>
                         
-                        <a href="https://buy.stripe.com/cNiaEX3Qw0Rtd1J2LMaAw03" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" style="margin-top: 0px;">Buy Now</a>
+                        <a href="https://buy.stripe.com/cNiaEX3Qw0Rtd1J2LMaAw03" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" style="margin-top: 30px;">Buy Now</a>
+                    </div>
+
+                    <div class="pricing-card fade-up">
+                        <div class="pricing-badge">Premium Service</div>
+                        <h3 class="pricing-title">TikTok Growth</h3>
+                        <div class="pricing-price">$5k</div>
+                        <p class="pricing-period">We handle everything.<br>You get the results.</p>
+                        
+                        <ul class="pricing-features">
+                            <li style="white-space: nowrap;">10 Premium U.S. TikTok Accounts</li>
+                            <li>300 Videos A Month</li>
+                            <li>Full Video Editing - Captions, effects, transitions included</li>
+                            <li>We handle all posting - You never touch TikTok</li>
+                            <li>Weekly performance reports</li>
+                            <li>Direct support access</li>
+                        </ul>
+                        
+                        <a href="https://calendly.com/toksupply-support/30min" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Book A Call</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Affiliate Section -->
-        <section class="affiliate section" id="affiliate">
-            <div class="container">
-                <h2 class="text-3xl font-bold" style="text-align: center; margin-bottom: 24px;">Join Our Affiliate Program</h2>
-                <p class="text-lg" style="text-align: center; margin-bottom: 48px; color: #666; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Earn 50% commission for every sale you refer.
-                </p>
-                
-                <div class="affiliate-cta fade-up" style="text-align: center; padding: 40px; background: #f8f8f8; border-radius: 12px; border: 1px solid rgba(0, 0, 0, 0.08); max-width: 500px; margin: 0 auto;">
-                    <h3 class="text-xl font-semibold" style="margin-bottom: 16px;">Ready to Start Earning?</h3>
-                    <p style="font-size: 15px; color: #666; margin-bottom: 32px;">
-                        Contact us to get your unique affiliate link and start promoting today.
-                    </p>
-                    <a href="mailto:support@toksupply.site?subject=Affiliate Program Application&body=Hi, I'm interested in joining your affiliate program. Please send me more details about how to get started." 
-                       class="btn btn-primary btn-lg" 
-                       style="display: inline-flex; align-items: center; gap: 8px;">
-                        📧 Contact Us: support@toksupply.site
-                    </a>
-                </div>
-            </div>
-        </section>
 
     </main>
 
@@ -1050,49 +1268,11 @@
                 step.style.transitionDelay = `${index * 0.15}s`;
             });
 
-            // Quantity counter functionality
-            const quantityInput = document.getElementById('quantity');
-            const quantityDisplay = document.getElementById('quantity-display');
-            const decreaseBtn = document.getElementById('decrease-qty');
-            const increaseBtn = document.getElementById('increase-qty');
-            const totalPrice = document.getElementById('total-price');
-            const pricePeriod = document.getElementById('price-period');
 
-            const pricePerAccount = 20;
-
-            function updatePrice() {
-                const quantity = parseInt(quantityInput.value);
-                const total = quantity * pricePerAccount;
-                
-                totalPrice.textContent = `$${total}`;
-                quantityDisplay.textContent = quantity;
-                
-                if (quantity === 1) {
-                    pricePeriod.textContent = 'per account';
-                } else {
-                    pricePeriod.textContent = `for ${quantity} accounts`;
-                }
-            }
-
-            if (decreaseBtn && increaseBtn && quantityInput && quantityDisplay) {
-                decreaseBtn.addEventListener('click', () => {
-                    const currentValue = parseInt(quantityInput.value);
-                    if (currentValue > 1) {
-                        quantityInput.value = currentValue - 1;
-                        updatePrice();
-                    }
-                });
-
-                increaseBtn.addEventListener('click', () => {
-                    const currentValue = parseInt(quantityInput.value);
-                    if (currentValue < 21) {
-                        quantityInput.value = currentValue + 1;
-                        updatePrice();
-                    }
-                });
-
-                // Initialize price
-                updatePrice();
+            // Simple buy now button functionality
+            const buyNowBtn = document.getElementById('buy-now-btn');
+            if (buyNowBtn) {
+                buyNowBtn.href = 'https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01';
             }
 
 
