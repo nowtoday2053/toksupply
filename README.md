@@ -1,92 +1,50 @@
-# TokSupply Website Clone
+# TokSupply Website
 
-A modern, responsive website clone of TokSupply.site built with vanilla HTML, CSS, and JavaScript.
+A clean, static website for TokSupply - U.S. Based TikTok Accounts.
+
+## How to Run
+
+### Option 1: Simple File Opening
+Just double-click `index.html` or run:
+```bash
+start index.html
+```
+
+### Option 2: Local Server (Recommended)
+For better performance and to avoid CORS issues:
+
+**Using Python:**
+```bash
+# Python 3
+python -m http.server 8000
+
+# Python 2
+python -m SimpleHTTPServer 8000
+```
+
+**Using Node.js:**
+```bash
+npx serve .
+```
+
+**Using PHP:**
+```bash
+php -S localhost:8000
+```
+
+Then open `http://localhost:8000` in your browser.
 
 ## Features
 
-- **Responsive Design**: Mobile-first approach that works on all devices
-- **Interactive Quantity Selector**: Increase/decrease buttons with keyboard support
-- **Dynamic Price Calculation**: Real-time total updates based on quantity
-- **Modern UI**: Clean, professional design matching the original
-- **Payment Integration Ready**: Structure in place for Stripe integration
-- **Accessibility**: Semantic HTML and keyboard navigation support
+- Clean, modern design
+- Responsive layout
+- Smooth animations
+- Pricing calculator
+- Social proof testimonials
+- No affiliate tracking (removed as requested)
 
-## Files Structure
+## Files
 
-```
-├── index.html          # Main HTML structure
-├── styles.css          # CSS styling and responsive design
-├── script.js           # JavaScript functionality
-└── README.md          # This file
-```
-
-## Key Features Implemented
-
-### 1. HTML Structure
-- Semantic HTML5 elements
-- Proper meta tags for SEO
-- Accessible form controls
-- Google Fonts integration (Inter font family)
-
-### 2. CSS Styling
-- Modern, clean design
-- Responsive breakpoints for mobile and tablet
-- Smooth transitions and hover effects
-- Professional color scheme
-- Mobile-first responsive design
-
-### 3. JavaScript Functionality
-- Quantity selector with +/- buttons
-- Real-time price calculation ($5 per account)
-- Form validation (min: 1, max: 1000)
-- Keyboard support (arrow keys)
-- Purchase button with loading state
-- Smooth user interactions
-
-## Usage
-
-1. Open `index.html` in a web browser
-2. Use the quantity selector to choose number of accounts (1-1000)
-3. See real-time price updates
-4. Click "buy now" to simulate purchase process
-
-## Customization
-
-### Changing the Price
-Edit the `PRICE_PER_ACCOUNT` constant in `script.js`:
-```javascript
-const PRICE_PER_ACCOUNT = 5; // Change this value
-```
-
-### Styling Modifications
-All styling is contained in `styles.css`. Key sections:
-- Colors and typography
-- Layout and spacing
-- Responsive breakpoints
-- Interactive elements
-
-### Adding Real Payment Processing
-Replace the `handlePurchase()` function in `script.js` with actual Stripe integration:
-
-```javascript
-function handlePurchase() {
-    // Integrate with Stripe API
-    // Create payment intent
-    // Process payment
-    // Handle success/error responses
-}
-```
-
-## Browser Support
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-- Responsive design works on all screen sizes
-
-## Legal Disclaimer
-
-This is a clone/demo website. The original legal disclaimer from TokSupply is included in the footer. Ensure compliance with platform terms of service and local laws when selling social media accounts.
-
-## License
-
-This project is for educational/demonstration purposes. Please respect the original TokSupply brand and intellectual property.
+- `index.html` - Main website file
+- `wieo.jpg`, `sdc.jpg`, `das.jpg` - Testimonial images
+- `README.md` - This file
