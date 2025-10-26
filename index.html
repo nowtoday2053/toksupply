@@ -311,6 +311,32 @@
             margin-top: -20px;
         }
 
+        /* Product Hunt Badge */
+        .product-hunt-badge {
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .product-hunt-badge a {
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .product-hunt-badge a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-hunt-badge img {
+            display: block;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
         .metric {
             text-align: center;
         }
@@ -843,6 +869,16 @@
                 justify-content: center;
             }
 
+            .product-hunt-badge {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .product-hunt-badge img {
+                width: 160px;
+                height: auto;
+            }
+
             .hero-metrics {
                 gap: 32px;
             }
@@ -982,6 +1018,13 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
+                        <!-- Product Hunt Badge -->
+                        <div class="product-hunt-badge">
+                            <a href="https://www.producthunt.com/products/toksupply?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-toksupply" target="_blank" rel="noopener noreferrer">
+                                <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1030876&theme=light&t=1761437333390" alt="TokSupply - Warmed U.S. TikTok Accounts | Product Hunt" style="width: 200px; height: 43px;" width="200" height="43" />
+                            </a>
+                        </div>
+                        
                         <h1 class="hero-headline">Get 100K+ Views on<br>Your Next TikTok Video.</h1>
                         <p class="hero-subheadline">Stop getting 200 views from the wrong audience. Start getting 200k views from people who actually buy.</p>
                         
