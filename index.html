@@ -198,6 +198,7 @@
         /* ===== HERO SECTION ===== */
         .hero {
             padding: 160px 0 120px;
+            overflow: hidden;
         }
 
         .hero-content {
@@ -211,6 +212,7 @@
             text-align: left;
             padding-right: 120px;
             margin-left: -40px;
+            padding-top: 0;
         }
 
         .hero-visual {
@@ -314,9 +316,12 @@
         /* Product Hunt Badge */
         .product-hunt-badge {
             margin-bottom: 24px;
+            margin-top: 0;
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
 
         .product-hunt-badge a {
@@ -1018,12 +1023,7 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <!-- Product Hunt Badge -->
-                        <div class="product-hunt-badge">
-                            <a href="https://www.producthunt.com/products/toksupply?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-toksupply" target="_blank" rel="noopener noreferrer">
-                                <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1030876&theme=light&t=1761437333390" alt="TokSupply - Warmed U.S. TikTok Accounts | Product Hunt" style="width: 200px; height: 43px;" width="200" height="43" />
-                            </a>
-                        </div>
+                        
                         
                         <h1 class="hero-headline">Get 100K+ Views on<br>Your Next TikTok Video.</h1>
                         <p class="hero-subheadline">Stop getting 200 views from the wrong audience. Start getting 200k views from people who actually buy.</p>
@@ -1189,7 +1189,7 @@
         <!-- Pricing Section -->
         <section class="pricing section" id="pricing">
             <div class="container">
-                <h2 class="text-3xl font-bold mb-4" style="text-align: center;">Only 11 Accounts Left This Week</h2>
+                <h2 class="text-3xl font-bold mb-4" style="text-align: center;">Only 19 Accounts Left This Week</h2>
                 
                 <div class="pricing-container">
                     <div class="pricing-card fade-up">
@@ -1197,6 +1197,7 @@
                         <h3 class="pricing-title">U.S. Based TikTok Account</h3>
                         <div class="pricing-price" id="total-price">$20</div>
                         <p class="pricing-period" id="price-period">per account</p>
+                        <p style="color: #ff4444; font-weight: 800; white-space: nowrap; margin-top: -8px; margin-bottom: 24px;">Limited deal: Buy one, get one free</p>
                         
                         
                         <ul class="pricing-features">
