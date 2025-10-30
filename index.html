@@ -198,6 +198,7 @@
         /* ===== HERO SECTION ===== */
         .hero {
             padding: 160px 0 120px;
+            overflow: hidden;
         }
 
         .hero-content {
@@ -211,6 +212,7 @@
             text-align: left;
             padding-right: 120px;
             margin-left: -40px;
+            padding-top: 0;
         }
 
         .hero-visual {
@@ -309,6 +311,35 @@
             align-items: center;
             margin-left: 0px;
             margin-top: -20px;
+        }
+
+        /* Product Hunt Badge */
+        .product-hunt-badge {
+            margin-bottom: 24px;
+            margin-top: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-hunt-badge a {
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .product-hunt-badge a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-hunt-badge img {
+            display: block;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
         .metric {
@@ -843,6 +874,16 @@
                 justify-content: center;
             }
 
+            .product-hunt-badge {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+
+            .product-hunt-badge img {
+                width: 160px;
+                height: auto;
+            }
+
             .hero-metrics {
                 gap: 32px;
             }
@@ -982,6 +1023,8 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
+                        
+                        
                         <h1 class="hero-headline">Get 100K+ Views on<br>Your Next TikTok Video.</h1>
                         <p class="hero-subheadline">Stop getting 200 views from the wrong audience. Start getting 200k views from people who actually buy.</p>
                         
@@ -1146,7 +1189,7 @@
         <!-- Pricing Section -->
         <section class="pricing section" id="pricing">
             <div class="container">
-                <h2 class="text-3xl font-bold mb-4" style="text-align: center;">Only 11 Accounts Left This Week</h2>
+                <h2 class="text-3xl font-bold mb-4" style="text-align: center;">Only 19 Accounts Left This Week</h2>
                 
                 <div class="pricing-container">
                     <div class="pricing-card fade-up">
@@ -1154,6 +1197,7 @@
                         <h3 class="pricing-title">U.S. Based TikTok Account</h3>
                         <div class="pricing-price" id="total-price">$20</div>
                         <p class="pricing-period" id="price-period">per account</p>
+                        <p style="color: #ff4444; font-weight: 800; white-space: nowrap; margin-top: -8px; margin-bottom: 24px;">Limited deal: Buy one, get one free</p>
                         
                         
                         <ul class="pricing-features">
