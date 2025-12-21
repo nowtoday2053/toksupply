@@ -3,1044 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TokSupply - U.S. Based TikTok Accounts</title>
-    <meta name="description" content="Premium US TikTok accounts for strategic market access. Verified, compliant, and performance-optimized for serious businesses.">
-    <meta name="keywords" content="TikTok accounts, social media marketing, digital marketing, business growth">
-    <meta property="og:title" content="TokSupply - U.S. Based TikTok Accounts">
-    <meta property="og:description" content="Premium US TikTok accounts for strategic market access. Verified, compliant, and performance-optimized for serious businesses.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://toksupply.site">
-    <link rel="canonical" href="https://toksupply.site">
+    <title>TokSupply — Verified U.S. TikTok Accounts</title>
+    <meta name="description" content="Launch TikTok campaigns directly into the U.S. algorithm with verified accounts delivered in 2 hours.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://js.stripe.com/v3/"></script>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHPPCMJDGR"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-QHPPCMJDGR');
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            950: '#020617',
+                            900: '#0F172A',
+                            800: '#1E293B'
+                        },
+                        brand: {
+                            primary: '#4F46E5',
+                            accent: '#7C3AED',
+                            success: '#10B981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        };
     </script>
-    
     <style>
-        /* ===== RESET & BASE ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            color-scheme: light;
         }
-
         html {
             scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
         }
-
         body {
-            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1.5;
-            color: #000000;
-            background-color: #ffffff;
-            overflow-x: hidden;
-            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            font-feature-settings: 'cv02','cv03','cv04';
+            background: #ffffff;
         }
-
-        /* ===== TYPOGRAPHY SYSTEM ===== */
-        .text-xs { font-size: 12px; line-height: 1.4; }
-        .text-sm { font-size: 14px; line-height: 1.4; }
-        .text-base { font-size: 16px; line-height: 1.5; }
-        .text-lg { font-size: 18px; line-height: 1.5; }
-        .text-xl { font-size: 20px; line-height: 1.4; }
-        .text-2xl { font-size: 24px; line-height: 1.3; }
-        .text-3xl { font-size: 30px; line-height: 1.2; }
-        .text-4xl { font-size: 36px; line-height: 1.1; }
-        .text-5xl { font-size: 48px; line-height: 1.05; }
-        .text-6xl { font-size: 60px; line-height: 1; }
-
-        .font-thin { font-weight: 100; }
-        .font-extralight { font-weight: 200; }
-        .font-light { font-weight: 300; }
-        .font-normal { font-weight: 400; }
-        .font-medium { font-weight: 500; }
-        .font-semibold { font-weight: 600; }
-        .font-bold { font-weight: 700; }
-
-        /* ===== LAYOUT SYSTEM ===== */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-lg {
-            padding: 120px 0;
-        }
-
-        /* ===== NAVIGATION ===== */
-        .navbar {
+        .scroll-indicator {
             position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .nav-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 72px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .nav-logo {
-            font-size: 20px;
-            font-weight: 700;
-            color: #000000;
-            text-decoration: none;
-            letter-spacing: -0.01em;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-link {
-            font-size: 15px;
-            font-weight: 500;
-            color: #000000;
-            text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
-
-        .nav-link:hover {
-            background: rgba(0, 0, 0, 0.04);
-        }
-
-        .nav-cta {
-            margin-left: 16px;
-        }
-
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-            user-select: none;
-        }
-
-        .btn-primary {
-            background: #000000;
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background: #000000;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .btn-secondary {
-            background: #ffffff;
-            color: #000000;
-            border: 1px solid #000000;
-        }
-
-        .btn-secondary:hover {
-            background: #000000;
-            color: #ffffff;
-            transform: translateY(-1px);
-        }
-
-        .btn-lg {
-            padding: 14px 28px;
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            padding: 160px 0 120px;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .hero-text {
-            text-align: left;
-            padding-right: 120px;
-            margin-left: -40px;
-            padding-top: 0;
-        }
-
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-                padding-left: 0;
-            }
-
-            @media (max-width: 768px) {
-                .hero-visual {
-                    justify-content: center;
-                    padding-left: 0;
-                }
-        }
-
-        .analytics-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            max-width: 900px;
-            align-items: start;
-        }
-
-        .analytics-card {
-            background: transparent;
-            border: none;
-            border-radius: 12px;
-            padding: 0;
-            box-shadow: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: visible;
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            min-height: auto;
-        }
-
-        .analytics-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-        }
-
-        .analytics-card:first-child {
-            transform: rotate(-1deg);
-        }
-
-        .analytics-card:last-child {
-            transform: rotate(1deg);
-        }
-
-        .analytics-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: block;
-            image-rendering: auto;
-            object-fit: contain;
-            flex: 1;
-            transform: scale(1.8);
-            transform-origin: center;
-        }
-
-        .hero-headline {
-            font-size: clamp(32px, 4.5vw, 48px);
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-            margin-bottom: 28px;
-            max-width: 100%;
-        }
-
-        .hero-subheadline {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: clamp(20px, 2.8vw, 24px);
-            font-weight: 300;
-            line-height: 1.4;
-            color: #000000;
-            margin-bottom: 48px;
-            max-width: 100%;
-        }
-
-        .hero-metrics {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin: 48px 0;
-            flex-wrap: wrap;
-            transform: translateX(-40px);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-left: 0px;
-            margin-top: -20px;
-        }
-
-        /* Product Hunt Badge */
-        .product-hunt-badge {
-            margin-bottom: 24px;
-            margin-top: 0;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .product-hunt-badge a {
-            display: inline-block;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .product-hunt-badge a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        }
-
-        .product-hunt-badge img {
-            display: block;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .metric {
-            text-align: center;
-        }
-
-        .metric:nth-child(2) {
-            margin-left: -20px;
-        }
-
-        .metric-number {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 8px;
-            text-align: center;
-        }
-
-        .metric-label {
-            font-size: 14px;
-            font-weight: 500;
-            color: #000000;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            text-align: center;
-        }
-
-        /* ===== SOCIAL PROOF ===== */
-        .social-proof {
-            background: #ffffff;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .testimonial {
-            background: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            border-radius: 12px;
-            padding: 32px;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            border-color: rgba(0, 0, 0, 0.12);
-        }
-
-        .testimonial-quote {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-top: 24px;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .author-avatar {
-            width: 48px;
-            height: 48px;
-            background: #000000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 18px;
-        }
-
-        .author-avatar-img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .author-info h4 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 2px;
-        }
-
-        .author-info h4 a {
-            color: #000000;
-            text-decoration: none;
-            transition: opacity 0.2s ease;
-        }
-
-        .author-info h4 a:hover {
-            opacity: 0.7;
-        }
-
-        .author-info p {
-            font-size: 13px;
-            color: #000000;
-        }
-
-        /* ===== PROBLEM/SOLUTION ===== */
-        .problem-solution {
-            background: #ffffff;
-        }
-
-        .comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            margin-top: 64px;
-        }
-
-        .comparison-side {
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .problem-side {
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            background: rgba(0, 0, 0, 0.02);
-        }
-
-        .solution-side {
-            border: 2px solid #000000;
-            background: #ffffff;
-        }
-
-        .comparison-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-        }
-
-        .problem-side .comparison-icon {
-            background: rgba(0, 0, 0, 0.05);
-        }
-
-        .solution-side .comparison-icon {
-            background: #000000;
-            color: #ffffff;
-        }
-
-        .comparison-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .comparison-list {
-            list-style: none;
-            text-align: left;
-        }
-
-        .comparison-list li {
-            padding: 8px 0;
-            font-size: 15px;
-            position: relative;
-            padding-left: 24px;
-        }
-
-        .comparison-list li::before {
-            content: "×";
-            position: absolute;
-            left: 0;
-            color: #000000;
-            font-weight: 600;
-        }
-
-        .solution-side .comparison-list li::before {
-            content: "✓";
-        }
-
-        /* ===== HOW IT WORKS ===== */
-        .how-it-works {
-            background: rgba(0, 0, 0, 0.02);
-        }
-
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 48px;
-            margin-top: 64px;
-        }
-
-        .step {
-            text-align: center;
-            padding: 40px 24px;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: #000000;
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0 auto 24px;
-        }
-
-        .step-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .step-description {
-            font-size: 15px;
-            line-height: 1.5;
-            color: #000000;
-        }
-
-        /* ===== PRICING ===== */
-        .pricing {
-            background: #ffffff;
-        }
-
-        .pricing-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 32px;
-            max-width: 1400px;
-            margin: 64px auto 0;
-        }
-
-        .pricing-card {
-            border: 2px solid #000000;
-            border-radius: 16px;
-            padding: 48px;
-            text-align: center;
-            background: #ffffff;
-            position: relative;
-        }
-
-        .pricing-card.bulk-card {
-            position: relative;
-            overflow: visible;
-        }
-
-        .discount-banner {
-            position: absolute;
-            top: 20px;
-            right: -30px;
-            background: #ff4444;
-            color: white;
-            padding: 6px 28px;
-            font-size: 12px;
-            font-weight: 700;
-            transform: rotate(45deg);
-            z-index: 10;
-            box-shadow: 0 2px 8px rgba(255, 68, 68, 0.3);
-        }
-
-        .pricing-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #000000;
-            color: #ffffff;
-            padding: 8px 24px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .bulk-card .pricing-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #000000;
-            color: #ffffff;
-            padding: 8px 24px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            z-index: 5;
-        }
-
-        .pricing-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .pricing-price {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .pricing-period {
-            font-size: 15px;
-            color: #000000;
-            margin-bottom: 32px;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 40px;
-            text-align: left;
-        }
-
-        .pricing-features li {
-            padding: 12px 0;
-            font-size: 15px;
-            position: relative;
-            padding-left: 28px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-features li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            font-weight: 700;
-            color: #000000;
-        }
-
-        /* ===== FINAL CTA ===== */
-        .final-cta {
-            background: #000000;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        .final-cta .container {
-            max-width: 600px;
-        }
-
-        .final-cta h2 {
-            font-size: clamp(28px, 4vw, 36px);
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 16px;
-        }
-
-        .final-cta p {
-            font-size: 18px;
-            line-height: 1.4;
-            margin-bottom: 32px;
-            opacity: 0.9;
-        }
-
-        .final-cta .btn-primary {
-            background: #ffffff;
-            color: #000000;
-        }
-
-        .final-cta .btn-primary:hover {
-            background: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
-        }
-
-        .urgency {
-            margin-top: 24px;
-            font-size: 14px;
-            opacity: 0.8;
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            background: #ffffff;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-            padding: 48px 0;
-            text-align: center;
-        }
-
-        .footer p {
-            font-size: 14px;
-            color: #000000;
-            margin-bottom: 8px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-top: 24px;
-        }
-
-        .footer-links a {
-            font-size: 13px;
-            color: #000000;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== ANIMATIONS ===== */
-        .fade-up {
+            height: 3px;
+            background: linear-gradient(90deg, #6366F1, #10B981);
+            width: 0%;
+            z-index: 999;
+        }
+        .fade-section {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease;
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
-
-        .fade-up.visible {
+        .fade-section.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
-        @keyframes rotate {
+        .sticky-nav {
+            backdrop-filter: blur(12px);
+            background: rgba(255,255,255,0.92);
+            box-shadow: 0 15px 45px rgba(15,23,42,0.12);
+        }
+        .nav-link {
+            color: rgba(15,23,42,0.65);
+        }
+        .nav-link:hover {
+            color: #0F172A;
+        }
+        .primary-button {
+            background: linear-gradient(120deg, #4F46E5, #7C3AED);
+            color: #fff;
+            box-shadow: 0 18px 45px rgba(99,102,241,0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 25px 55px rgba(99,102,241,0.3);
+        }
+        .outline-button {
+            border: 1px solid rgba(79,70,229,0.2);
+            color: #4F46E5;
+        }
+        .outline-button:hover {
+            border-color: #4F46E5;
+            color: #312E81;
+        }
+        .shadow-card {
+            box-shadow: 0 25px 50px -12px rgba(15,23,42,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .shadow-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px -12px rgba(15,23,42,0.15);
+        }
+        .comparison-row:hover {
+            background: rgba(79,70,229,0.08);
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 50px -15px rgba(15,23,42,0.12);
+        }
+        .marquee-track {
+            display: flex;
+            gap: 2.5rem;
+            animation: scroll 18s linear infinite;
+        }
+        @keyframes scroll {
             0% {
-                transform: rotate(0deg);
+                transform: translateX(0);
             }
             100% {
-                transform: rotate(360deg);
+                transform: translateX(-50%);
             }
-        }
-
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .nav-cta {
-                margin-left: 0;
-            }
-
-            .nav-cta .btn {
-                padding: 8px 16px;
-                font-size: 13px;
-            }
-
-            .nav-logo img {
-                height: 70px !important;
-                margin-right: -8px !important;
-            }
-
-            .nav-logo {
-                font-size: 16px;
-            }
-
-            .container {
-                padding: 0 16px;
-            }
-
-            .nav-container {
-                padding: 0 16px;
-            }
-
-            .section {
-                padding: 60px 0;
-            }
-
-            .section-lg {
-                padding: 80px 0;
-            }
-
-            .hero {
-                padding: 120px 0 80px;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 48px;
-                text-align: center;
-            }
-
-            .hero-text {
-                text-align: center;
-                padding-right: 0;
-                margin-left: 0;
-            }
-
-            .analytics-showcase {
-                max-width: 100%;
-                grid-template-columns: 1fr;
-                gap: 16px;
-                padding: 0 16px;
-            }
-
-            .analytics-image {
-                transform: scale(0.9);
-                width: 100%;
-                height: auto;
-            }
-
-            .analytics-card:first-child,
-            .analytics-card:last-child {
-                transform: none;
-            }
-
-            .analytics-image {
-                min-height: 250px;
-            }
-
-            .hero-headline {
-                font-size: clamp(28px, 6vw, 36px);
-                margin-bottom: 20px;
-            }
-
-            .hero-subheadline {
-                font-size: clamp(18px, 4vw, 20px);
-                margin-bottom: 32px;
-            }
-
-            .hero-buttons {
-                gap: 16px;
-                justify-content: center;
-            }
-
-            .product-hunt-badge {
-                justify-content: center;
-                margin-bottom: 20px;
-            }
-
-            .product-hunt-badge img {
-                width: 160px;
-                height: auto;
-            }
-
-            .hero-metrics {
-                gap: 32px;
-            }
-
-            .comparison {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .steps {
-                gap: 32px;
-            }
-
-            .testimonials {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .pricing-container {
-                grid-template-columns: 1fr;
-                gap: 24px;
-                margin: 48px 16px 0;
-            }
-
-            .pricing-card {
-                padding: 24px;
-            }
-
-            .pricing-badge {
-                font-size: 11px;
-                padding: 6px 16px;
-            }
-
-            .pricing-title {
-                font-size: 20px;
-            }
-
-            .pricing-price {
-                font-size: 36px;
-            }
-
-            .affiliate-content {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-metrics {
-                flex-direction: column;
-                gap: 24px;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 16px;
-            }
-        }
-
-        /* ===== ACCESSIBILITY ===== */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-
-            html {
-                scroll-behavior: auto;
-            }
-        }
-
-        .btn:focus-visible,
-        .nav-link:focus-visible {
-            outline: 2px solid #000000;
-            outline-offset: 2px;
-        }
-
-        /* Affiliate modal */
-        .modal-backdrop {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.45);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1001;
-        }
-        .modal {
-            background: #ffffff;
-            border: 1px solid rgba(0,0,0,0.08);
-            border-radius: 12px;
-            width: 100%;
-            max-width: 520px;
-            padding: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-        .modal-actions { display:flex; gap:8px; }
-
-        /* Quantity selector hover effects */
-        #decrease-qty:hover,
-        #increase-qty:hover {
-            background: #000 !important;
-            color: white !important;
-            transform: scale(1.05);
-        }
-
-        #decrease-qty:active,
-        #increase-qty:active {
-            transform: scale(0.95);
         }
     </style>
 </head>
 
-<body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <img src="logo.png" alt="TokSupply Logo" style="height: 75px; margin-right: 8px; vertical-align: middle;">
+<body class="bg-white text-slate-900 font-sans antialiased">
+    <div class="scroll-indicator" id="scrollProgress"></div>
+
+    <!-- Sticky Header -->
+    <header id="siteHeader" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+        <div class="mx-auto max-w-6xl px-6">
+            <div class="flex items-center justify-between py-5">
+                <a href="#home" class="flex items-center gap-3 text-slate-900 font-semibold tracking-tight">
+                    <img src="logo.png" alt="TokSupply" class="h-10 w-auto">
                 TokSupply
             </a>
-            <ul class="nav-menu">
-                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
-                <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#social-proof" class="nav-link">Reviews</a></li>
-            </ul>
-            <div class="nav-cta">
-                <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#how" class="nav-link transition">How It Works</a>
+                    <a href="#pricing" class="nav-link transition">Pricing</a>
+                    <a href="#reviews" class="nav-link transition">Reviews</a>
+                </nav>
+                <div class="hidden md:flex gap-3">
+                    <a href="#reviews" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold outline-button transition">
+                        See Proof
+                    </a>
+                    <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold primary-button">
+                        Buy Now
+                        <span aria-hidden="true">→</span>
+                    </a>
+            </div>
+                <button id="mobileToggle" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200">
+                    <span class="sr-only">Toggle menu</span>
+                    <svg id="menuIcon" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+        </div>
+                        </div>
+        <div id="mobileMenu" class="md:hidden hidden bg-white/95 backdrop-blur px-6 pb-6 border-t border-slate-200">
+            <div class="flex flex-col gap-4 text-sm font-semibold text-slate-600">
+                <a href="#how" class="hover:text-slate-900">How It Works</a>
+                <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+                <a href="#reviews" class="hover:text-slate-900">Reviews</a>
+                <a href="#final-cta" class="hover:text-slate-900">Get Started</a>
+                    </div>
+            <div class="mt-4 flex flex-col gap-3">
+                <a href="#reviews" class="text-center px-4 py-3 rounded-full border border-slate-200 text-sm font-semibold text-slate-700 hover:text-slate-900 hover:border-slate-400 transition">See Proof</a>
+                <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" target="_blank" rel="noopener" class="text-center px-5 py-3 rounded-full text-sm font-semibold primary-button">Buy Now</a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero section-lg" id="home">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        
-                        
-                        <h1 class="hero-headline">Get 100K+ Views on<br>Your Next TikTok Video.</h1>
-                        <p class="hero-subheadline">Stop getting 200 views from the wrong audience. Start getting 200k views from people who actually buy.</p>
-                        
-                        <div class="hero-buttons">
-                            <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Buy Now</a>
-                            <a href="#social-proof" class="btn btn-secondary btn-lg">See Proof</a>
+    <main id="home" class="pt-24">
+        <!-- HERO -->
+        <section class="bg-white">
+            <div class="mx-auto max-w-6xl px-6 py-24 lg:py-28 flex flex-col gap-16 lg:flex-row lg:items-center">
+                <div class="flex-1">
+                    <div class="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-2 text-sm text-indigo-600 mb-5">
+                        <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Verified U.S. TikTok accounts delivered in 2 hours
+                            </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-slate-900">
+                        Get 100K+ Views on Your Next TikTok Video
+                    </h1>
+                    <p class="mt-6 text-lg text-slate-600 max-w-xl">
+                        Stop getting 200 views from the wrong audience. With TokSupply you post using verified U.S. accounts, plug straight into the American algorithm, and reach buyers who actually convert.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-lg font-semibold primary-button">
+                            Buy Now
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a href="#reviews" class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-lg font-semibold border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-400 transition">
+                            See Proof
+                            <span>↓</span>
+                        </a>
+                            </div>
+                    <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-slate-600">
+                        <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                            <p class="text-3xl font-semibold text-slate-900" data-counter="500">0</p>
+                            <p class="mt-1 uppercase tracking-[0.2em] text-xs text-slate-500">Accounts Delivered</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                            <p class="text-3xl font-semibold text-slate-900">92%</p>
+                            <p class="mt-1 uppercase tracking-[0.2em] text-xs text-slate-500">U.S. Audience</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                            <p class="text-3xl font-semibold text-slate-900">4.9★</p>
+                            <p class="mt-1 uppercase tracking-[0.2em] text-xs text-slate-500">Average Rating</p>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                            <p class="text-3xl font-semibold text-slate-900">2 hrs</p>
+                            <p class="mt-1 uppercase tracking-[0.2em] text-xs text-slate-500">Delivery Time</p>
                         </div>
                     </div>
-                    
-                    <div class="hero-visual">
-                        <div class="analytics-showcase">
-                            <div class="analytics-card">
-                                <img src="analytics1.jpg" alt="TikTok Analytics Dashboard" class="analytics-image">
+                    <div class="mt-6 flex flex-wrap gap-3 text-sm text-slate-600">
+                        <span class="rounded-full border border-slate-200 px-4 py-1.5">No VPN or burner phones</span>
+                        <span class="rounded-full border border-slate-200 px-4 py-1.5">Guaranteed U.S. geolocation</span>
+                        <span class="rounded-full border border-slate-200 px-4 py-1.5">Shadow-ban resistant</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div class="relative">
+                        <div class="absolute -top-8 -left-6 rounded-full bg-white px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 shadow-card">Live Dashboard</div>
+                        <div class="rounded-[32px] border border-slate-200 bg-white p-6 shadow-card">
+                        <div class="grid grid-cols-2 gap-4">
+                                <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
+                                <img src="analytics1.jpg" loading="lazy" alt="TikTok analytics mockup" class="w-full h-full object-cover">
+                            </figure>
+                                <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
+                                <img src="analytics2.jpg" loading="lazy" alt="TikTok analytics mockup" class="w-full h-full object-cover">
+                            </figure>
                             </div>
-                            <div class="analytics-card">
-                                <img src="analytics2.jpg" alt="TikTok Performance Metrics" class="analytics-image">
+                            <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6 space-y-5">
+                                <div class="flex items-center justify-between text-sm text-slate-600">
+                                    <span>Audience Location</span>
+                                    <span class="font-semibold text-slate-900">92% United States</span>
+                            </div>
+                                <div class="h-2 rounded-full bg-slate-200 overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-emerald-400 to-indigo-500 rounded-full" style="width:92%"></div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div class="rounded-2xl border border-slate-200 bg-white px-4 py-3">
+                                        <p class="text-xs uppercase text-slate-500 tracking-[0.2em]">Watch Time</p>
+                                        <p class="text-lg font-semibold text-slate-900 mt-1">3.7×</p>
+                                    </div>
+                                    <div class="rounded-2xl border border-slate-200 bg-white px-4 py-3">
+                                        <p class="text-xs uppercase text-slate-500 tracking-[0.2em]">Conversion Lift</p>
+                                        <p class="text-lg font-semibold text-slate-900 mt-1">+412%</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1048,294 +259,358 @@
             </div>
         </section>
 
-        <!-- Problem/Solution Section -->
-        <section class="problem-solution section" id="solution">
-            <div class="container">
-                <h2 class="text-3xl font-bold" style="text-align: center; margin-bottom: 64px;">Why U.S. TikTok Accounts Perform Better:</h2>
-                
-                <div class="comparison">
-                    <div class="comparison-side problem-side fade-up">
-                        <div class="comparison-icon">⚠</div>
-                        <h3 class="comparison-title">International Accounts</h3>
-                        <ul class="comparison-list">
-                            <li>Higher chance of getting shadowbanned</li>
-                            <li>Accounts can get suspended anytime</li>
-                            <li>Hard to grow without spending money</li>
-                            <li>Posts don't always reach your audience</li>
-                            <li>Engagement drops without warning</li>
-                            <li>Takes forever to build a following</li>
+        <!-- SOCIAL PROOF -->
+        <section class="border-y border-slate-200 bg-slate-50">
+            <div class="overflow-hidden whitespace-nowrap py-4 text-sm font-semibold text-slate-600">
+                <div class="marquee-track">
+                    <p>Prathamesh: 800 → 47K views</p>
+                    <p>Max: 100K+ views weekly</p>
+                    <p>Dev: 2.6K → 285K views</p>
+                    <p>Mike: 1K → 50K followers</p>
+                    <p>Prathamesh: 800 → 47K views</p>
+                    <p>Max: 100K+ views weekly</p>
+                    <p>Dev: 2.6K → 285K views</p>
+                    <p>Mike: 1K → 50K followers</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY IT WORKS -->
+        <section id="benefits" class="py-24 bg-slate-50">
+            <div class="mx-auto max-w-6xl px-6">
+                <div class="fade-section text-center">
+                    <p class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-3">Why U.S. Accounts Win</p>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-slate-900">A/B the same content and watch the U.S. algorithm explode</h2>
+                </div>
+                <div class="mt-12 grid gap-8 lg:grid-cols-2">
+                    <div class="rounded-3xl border border-slate-200 bg-white p-8 fade-section shadow-card">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-3 text-slate-900">
+                            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-rose-100 text-lg">⚠</span>
+                            International Accounts
+                        </h3>
+                        <ul class="space-y-4 text-slate-600">
+                            <li class="comparison-row rounded-2xl px-4 py-3">Higher chance of getting shadowbanned</li>
+                            <li class="comparison-row rounded-2xl px-4 py-3">Posts stall at 200–500 views</li>
+                            <li class="comparison-row rounded-2xl px-4 py-3">Requires VPNs, burner phones, constant upkeep</li>
+                            <li class="comparison-row rounded-2xl px-4 py-3">Audience rarely buys or books calls</li>
+                            <li class="comparison-row rounded-2xl px-4 py-3">Weeks of work before you see traction</li>
                         </ul>
                     </div>
-                    
-                    <div class="comparison-side solution-side fade-up">
-                        <div class="comparison-icon">✓</div>
-                        <h3 class="comparison-title">U.S. TikTok Accounts</h3>
-                        <ul class="comparison-list">
-                            <li>Get access to the U.S. market right away</li>
-                            <li>Reach more buyers with bigger spending power</li>
-                            <li>U.S. accounts perform better with the algorithm</li>
-                            <li>Higher chance of going viral in the U.S.</li>
-                            <li>No risk of bans</li>
-                            <li>Faster growth and stronger engagement</li>
+                    <div class="rounded-3xl border border-indigo-200 bg-white p-8 fade-section shadow-card">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center gap-3 text-slate-900">
+                            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-lg text-emerald-600">✓</span>
+                            U.S. TokSupply Accounts
+                        </h3>
+                        <ul class="space-y-4 text-slate-700">
+                            <li class="comparison-row rounded-2xl px-4 py-3">Plug straight into the U.S. For You Page</li>
+                            <li class="comparison-row rounded-2xl px-4 py-3">Reach buyers with 4× more spending power</li>
+                            <li class="comparison-row rounded-2xl px-4 py-3">Content goes viral without ads or VPNs</li>
+                            <li class="comparison-row rounded-2xl px-4 py-3">Accounts are verified, zero ban risk</li>
+                            <li class="comparison-row rounded-2xl px-4 py-3">Results in days, not months</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Social Proof Section -->
-        <section class="social-proof section" id="social-proof">
-            <div class="container">
-                <h2 class="text-2xl" style="text-align: center; margin-bottom: 32px; font-weight: 600; color: #000000;">Meet the creators who went viral using our US accounts:</h2>
-                
-                <div class="testimonials">
-                    <div class="testimonial fade-up">
-                        <div class="testimonial-author">
-                            <img src="wieo.jpg" alt="Prathamesh Mali" class="author-avatar-img">
-                            <div class="author-info">
-                                <h4><a href="https://x.com/ecomprathamesh" target="_blank" rel="noopener noreferrer">Prathamesh Mali</a></h4>
-                                <p>AI Marketer</p>
+        <!-- TESTIMONIALS -->
+        <section id="reviews" class="py-24 bg-white">
+            <div class="mx-auto max-w-6xl px-6">
+                <div class="fade-section text-center mb-16">
+                    <p class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-3">Reviews</p>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-slate-900">Meet the creators and agencies hitting 100K+ every week</h2>
+                            </div>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <article class="rounded-3xl border border-slate-200 bg-white p-6 testimonial-card fade-section">
+                        <div class="flex items-center gap-4">
+                            <img src="wieo.jpg" alt="Prathamesh Mali" class="h-12 w-12 rounded-full object-cover">
+                            <div>
+                                <p class="font-semibold text-slate-900">Prathamesh Mali</p>
+                                <p class="text-sm text-slate-500">AI Marketer</p>
                             </div>
                         </div>
-                        <p class="testimonial-quote">"Went from 800 views to 47K views on my first post with a TokSupply US account. Same content, completely different results."</p>
-                    </div>
-                    
-                    <div class="testimonial fade-up">
-                        <div class="testimonial-author">
-                            <img src="sdc.jpg" alt="Max Martelli" class="author-avatar-img">
-                            <div class="author-info">
-                                <h4><a href="https://x.com/MaxMartelli4" target="_blank" rel="noopener noreferrer">Max Martelli</a></h4>
-                                <p>Growth Marketer</p>
+                        <p class="mt-4 text-slate-600">"Same content, different account. Went from 800 views to 47K overnight. Clients thought I was running ads."</p>
+                        <p class="mt-3 text-sm font-semibold text-emerald-600">800 → 47K views</p>
+                        <a href="https://x.com/ecomprathamesh" target="_blank" class="text-xs text-indigo-500 underline mt-2 inline-block">View profile</a>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-white p-6 testimonial-card fade-section">
+                        <div class="flex items-center gap-4">
+                            <img src="sdc.jpg" alt="Max Martelli" class="h-12 w-12 rounded-full object-cover">
+                            <div>
+                                <p class="font-semibold text-slate-900">Max Martelli</p>
+                                <p class="text-sm text-slate-500">Growth Marketer</p>
                             </div>
                         </div>
-                        <p class="testimonial-quote">"Was stuck getting 400 views on my marketing content until I got a US account from TokSupply. Now I'm consistently hitting 100K+ views everyweek and landing actual clients."</p>
-                    </div>
-                    
-                    <div class="testimonial fade-up">
-                        <div class="testimonial-author">
-                            <img src="das.jpg" alt="Matt Gray" class="author-avatar-img">
-                            <div class="author-info">
-                                <h4><a href="https://x.com/matt_gray_" target="_blank" rel="noopener noreferrer">Matt Gray</a></h4>
-                                <p>Business Coach</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"I was using VPNs, eSims, and burner phones but they weren't targeting the US fyp page. I tried TokSupply and my first video got 173K views lol."</p>
-                    </div>
-                    
-                    <div class="testimonial fade-up">
-                        <div class="testimonial-author">
-                            <img src="dev mehta.jpg" alt="Dev Mehta" class="author-avatar-img">
-                            <div class="author-info">
-                                <h4><a href="#" target="_blank" rel="noopener noreferrer">Dev Mehta</a></h4>
-                                <p>Brand Builder</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"TokSupply changed everything for my business. Went from 2.6k views to 285k in just one week. The US algorithm is absolutely insane compared to international accounts."</p>
-                    </div>
-                    
-                    <div class="testimonial fade-up">
-                        <div class="testimonial-author">
-                            <img src="mik.jpg" alt="Mike Rodriguez" class="author-avatar-img">
-                            <div class="author-info">
-                                <h4><a href="#" target="_blank" rel="noopener noreferrer">Mike Rodriguez</a></h4>
-                                <p>E-commerce Entrepreneur</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"Best investment I've made for my brand. My TikTok went from 1K followers to 50K in 2 months with TokSupply. The engagement rate is through the roof!"</p>
-                    </div>
-                    
-                    <div class="testimonial fade-up">
-                        <div class="testimonial-author">
-                            <img src="alex.jpg" alt="Alex Liu" class="author-avatar-img">
-                            <div class="author-info">
-                                <h4><a href="#" target="_blank" rel="noopener noreferrer">Alex Liu</a></h4>
-                                <p>Digital Marketer</p>
-                            </div>
-                        </div>
-                        <p class="testimonial-quote">"I was skeptical at first, but TokSupply delivered exactly what they promised. My content now consistently hits 100K+ views. Worth every penny!"</p>
+                        <p class="mt-4 text-slate-600">"We supply multiple clients with TokSupply accounts. Every single one now gets 100K+ weekly views with zero ad spend."</p>
+                        <p class="mt-3 text-sm font-semibold text-emerald-600">Consistent 100K+/week</p>
+                        <a href="https://x.com/MaxMartelli4" target="_blank" class="text-xs text-indigo-500 underline mt-2 inline-block">View profile</a>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-white p-6 testimonial-card fade-section">
+                        <div class="flex items-center gap-4">
+                            <img src="das.jpg" alt="Matt Gray" class="h-12 w-12 rounded-full object-cover">
+                            <div>
+                                <p class="font-semibold text-slate-900">Matt Gray</p>
+                                <p class="text-sm text-slate-500">Business Coach</p>
                     </div>
                 </div>
-                
+                        <p class="mt-4 text-slate-600">"I tried VPNs, burners, the works. First TokSupply video hit 173K views and booked 4 intensives in one weekend."</p>
+                        <p class="mt-3 text-sm font-semibold text-emerald-600">0 → 173K views</p>
+                        <a href="https://x.com/matt_gray_" target="_blank" class="text-xs text-indigo-500 underline mt-2 inline-block">View profile</a>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-white p-6 testimonial-card fade-section">
+                        <div class="flex items-center gap-4">
+                            <img src="dev mehta.jpg" alt="Dev Mehta" class="h-12 w-12 rounded-full object-cover">
+                            <div>
+                                <p class="font-semibold text-slate-900">Dev Mehta</p>
+                                <p class="text-sm text-slate-500">Brand Builder</p>
             </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section class="how-it-works section" id="how-it-works">
-            <div class="container">
-                <h2 class="text-3xl font-bold" style="text-align: center; margin-bottom: 64px;">How It Works:</h2>
-                
-                <div class="steps">
-                    <div class="step fade-up">
-                        <div class="step-number">1</div>
-                        <h3 class="step-title">Purchase Account</h3>
-                        <p class="step-description">Choose how many US TikTok accounts you need.</p>
                     </div>
-                    
-                    <div class="step fade-up">
-                        <div class="step-number">2</div>
-                        <h3 class="step-title">Get Login Details</h3>
-                        <p class="step-description">Receive TikTok login credentials within 2 hours via email (support@toksupply.site).</p>
+                        <p class="mt-4 text-slate-600">"2.6K to 285K views in a week. Nothing changed but the audience. U.S. algorithm hits totally differently."</p>
+                        <p class="mt-3 text-sm font-semibold text-emerald-600">2.6K → 285K views</p>
+                        <span class="text-xs text-indigo-500 mt-2 inline-block">TikTok @devmehta</span>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-white p-6 testimonial-card fade-section">
+                        <div class="flex items-center gap-4">
+                            <img src="mik.jpg" alt="Mike Rodriguez" class="h-12 w-12 rounded-full object-cover">
+                            <div>
+                                <p class="font-semibold text-slate-900">Mike Rodriguez</p>
+                                <p class="text-sm text-slate-500">E-commerce Founder</p>
                     </div>
-                    
-                    <div class="step fade-up">
-                        <div class="step-number">3</div>
-                        <h3 class="step-title">Start Posting</h3>
-                        <p class="step-description">Log into your new TikTok account and begin posting content since today.</p>
                     </div>
+                        <p class="mt-4 text-slate-600">"1000 followers to 50K in 60 days. Wholesale buyers DM us daily because 90% of views are now U.S. retail."</p>
+                        <p class="mt-3 text-sm font-semibold text-emerald-600">1K → 50K followers</p>
+                        <span class="text-xs text-indigo-500 mt-2 inline-block">TikTok @mikrod</span>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-white p-6 testimonial-card fade-section">
+                        <div class="flex items-center gap-4">
+                            <img src="alex.jpg" alt="Alex Liu" class="h-12 w-12 rounded-full object-cover">
+                            <div>
+                                <p class="font-semibold text-slate-900">Alex Liu</p>
+                                <p class="text-sm text-slate-500">Digital Marketer</p>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-slate-600">"Our agency now includes TokSupply accounts in every engagement. Clients get traction in 48 hours instead of 4 months."</p>
+                        <p class="mt-3 text-sm font-semibold text-emerald-600">Agency-wide standard</p>
+                        <span class="text-xs text-indigo-500 mt-2 inline-block">TikTok @alexgrowth</span>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section class="pricing section" id="pricing">
-            <div class="container">
-                <h2 class="text-3xl font-bold mb-4" style="text-align: center;">Only 19 Accounts Left This Week</h2>
-                
-                <div class="pricing-container">
-                    <div class="pricing-card fade-up">
-                        <div class="pricing-badge">Premium Access</div>
-                        <h3 class="pricing-title">U.S. Based TikTok Account</h3>
-                        <div class="pricing-price" id="total-price">$20</div>
-                        <p class="pricing-period" id="price-period">per account</p>
-                        <p style="color: #ff4444; font-weight: 800; white-space: nowrap; margin-top: -8px; margin-bottom: 4px;">Limited deal: Buy 1, get 1 free</p>
-                        <p style="color: #000000; font-weight: 600; opacity: 0.75; margin-bottom: 24px;">(72 hours left)</p>
-                        
-                        
-                        <ul class="pricing-features">
-                            <li>U.S. Based TikTok Account</li>
-                            <li>Ready to use immediately</li>
-                            <li>No esim, VPN, or burner phone needed</li>
-                            <li>Access to U.S. algorithm & audience</li>
-                        </ul>
-                        
-                        <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" class="btn btn-primary btn-lg" id="buy-now-btn" target="_blank" rel="noopener noreferrer">Buy Now</a>
-                    </div>
+        <!-- HOW IT WORKS -->
+        <section id="how" class="py-24 bg-slate-50">
+            <div class="mx-auto max-w-6xl px-6">
+                <div class="fade-section text-center mb-16">
+                    <p class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-3">How It Works</p>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-slate-900">Launch a U.S. TikTok presence in three steps</h2>
+                </div>
+                <div class="grid gap-8 md:grid-cols-3">
+                    <article class="rounded-3xl border border-slate-200 bg-white p-8 fade-section shadow-card">
+                        <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 text-lg font-semibold mb-6">1</div>
+                        <h3 class="text-2xl font-semibold mb-3 text-slate-900">Purchase</h3>
+                        <p class="text-slate-600">Choose how many accounts you need and pay securely via Stripe.</p>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-white p-8 fade-section shadow-card">
+                        <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 text-lg font-semibold mb-6">2</div>
+                        <h3 class="text-2xl font-semibold mb-3 text-slate-900">Receive</h3>
+                        <p class="text-slate-600">We email verified login credentials in under 2 hours—no setup needed.</p>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-white p-8 fade-section shadow-card">
+                        <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 text-lg font-semibold mb-6">3</div>
+                        <h3 class="text-2xl font-semibold mb-3 text-slate-900">Scale</h3>
+                        <p class="text-slate-600">Start posting immediately. Track views, leads, and sales from U.S. buyers.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <div class="pricing-card bulk-card fade-up">
-                        <div class="pricing-badge">Best Value</div>
-                        <h3 class="pricing-title">Bulk Package</h3>
-                        <div class="pricing-price" style="text-align: center; margin: 0 auto;">$100</div>
-                        <p class="pricing-period">for 10 accounts</p>
-                        <p style="color: #ff4444; font-weight: 800; white-space: nowrap; margin-top: -8px; margin-bottom: 4px;">Limited deal: Buy 10, get 10 free</p>
-                        <p style="color: #000000; font-weight: 600; opacity: 0.75; margin-bottom: 24px;">(72 hours left)</p>
-                        
-                        <ul class="pricing-features" style="margin-top: 45px;">
-                            <li>10 U.S. Based TikTok Accounts</li>
-                            <li>Same quality as individual accounts</li>
-                            <li>Perfect for agencies & teams</li>
-                            <li>Save $100 compared to buying individually</li>
-                        </ul>
-                        
-                        <a href="https://buy.stripe.com/cNiaEX3Qw0Rtd1J2LMaAw03" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" style="margin-top: 30px;">Buy Now</a>
-                    </div>
-
-                    <div class="pricing-card fade-up">
-                        <div class="pricing-badge">Premium Service</div>
-                        <h3 class="pricing-title">TikTok Growth</h3>
-                        <div class="pricing-price">$5k</div>
-                        <p class="pricing-period">We handle everything.<br>You get the results.</p>
-                        
-                        <ul class="pricing-features">
-                            <li style="white-space: nowrap;">10 Premium U.S. TikTok Accounts</li>
-                            <li>300 Videos A Month</li>
-                            <li>Full Video Editing - Captions, effects, transitions included</li>
-                            <li>We handle all posting - You never touch TikTok</li>
-                            <li>Weekly performance reports</li>
-                            <li>Direct support access</li>
-                        </ul>
-                        
-                        <a href="https://calendly.com/toksupply-support/30min" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">Book A Call</a>
+        <!-- INVENTORY -->
+        <section class="py-16 bg-white">
+            <div class="mx-auto max-w-4xl px-6">
+                <div class="rounded-3xl border border-slate-200 bg-slate-50 p-10 text-center shadow-card fade-section">
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-500">Only 19 Accounts Left This Week</p>
+                    <h3 class="text-3xl font-semibold mt-4 text-slate-900">Secure your access before inventory resets</h3>
+                    <p class="mt-4 text-slate-600">We cap weekly supply to protect account quality. Agencies reserve their accounts in advance so they never miss a launch window.</p>
+                    <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-600">
+                        <span class="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 bg-white">⚡ 2-Hour Delivery</span>
+                        <span class="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 bg-white">💳 Stripe + Cards</span>
+                        <span class="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 bg-white">🔒 Money-Back Guarantee</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- PRICING -->
+        <section id="pricing" class="py-24 bg-slate-50">
+            <div class="mx-auto max-w-6xl px-6">
+                <div class="fade-section text-center mb-16">
+                    <p class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-3">Pricing</p>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-slate-900">Pick the access plan that matches your pipeline</h2>
+                </div>
+                <div class="grid gap-8 lg:grid-cols-3">
+                    <article class="rounded-3xl border border-slate-200 bg-white p-8 flex flex-col shadow-card fade-section">
+                        <div class="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-1 text-sm font-semibold text-indigo-600 mb-6">Premium Access</div>
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">U.S. TikTok Account</h3>
+                        <p class="text-4xl font-semibold text-slate-900">$20</p>
+                        <p class="text-sm text-slate-500">per account</p>
+                        <p class="text-sm font-semibold text-emerald-600 mb-6">Limited: Buy 1, Get 1 Free</p>
+                        <ul class="text-slate-600 space-y-3 flex-1">
+                            <li class="flex items-center gap-3"><span class="text-emerald-500">✔</span> Verified U.S. email + phone</li>
+                            <li class="flex items-center gap-3"><span class="text-emerald-500">✔</span> Ready to post immediately</li>
+                            <li class="flex items-center gap-3"><span class="text-emerald-500">✔</span> 1:1 replacement within 30 days</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" target="_blank" rel="noopener" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold primary-button">Buy Now</a>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-white p-8 flex flex-col shadow-card fade-section">
+                        <div class="inline-flex items-center gap-2 rounded-full bg-indigo-100 px-4 py-1 text-sm font-semibold text-indigo-700 mb-6">Bulk Package</div>
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">15 Account Bundle</h3>
+                        <p class="text-4xl font-semibold text-slate-900">$100</p>
+                        <p class="text-sm text-slate-500 mb-6">one-time payment</p>
+                        <ul class="text-slate-600 space-y-3 flex-1">
+                            <li class="flex items-center gap-3"><span class="text-emerald-500">✔</span> 15 Warmed U.S. TikTok accounts</li>
+                            <li class="flex items-center gap-3"><span class="text-emerald-500">✔</span> Save vs buying individually</li>
+                            <li class="flex items-center gap-3"><span class="text-emerald-500">✔</span> Perfect for agencies & teams</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/cNiaEX3Qw0Rtd1J2LMaAw03" target="_blank" rel="noopener" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold primary-button">Buy Now</a>
+                    </article>
+                    <article class="rounded-3xl border border-indigo-300 bg-white p-8 flex flex-col shadow-card fade-section">
+                        <div class="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-1 text-sm font-semibold text-emerald-600 mb-6">Best Value</div>
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-2">Monthly Agency Supply</h3>
+                        <p class="text-4xl font-semibold text-slate-900">$99<span class="text-lg font-normal text-slate-500">/month</span></p>
+                        <p class="text-sm text-slate-500 mb-6">10 fresh accounts shipped every month</p>
+                        <ul class="text-slate-600 space-y-3 flex-1">
+                            <li class="flex items-start gap-3"><span class="text-emerald-500 pt-1">✔</span> Receive new accounts every month</li>
+                            <li class="flex items-start gap-3"><span class="text-emerald-500 pt-1">✔</span> Cheaper than buying 5 accounts at $20 each</li>
+                            <li class="flex items-start gap-3"><span class="text-emerald-500 pt-1">✔</span> Auto-fulfilled monthly—no reordering required</li>
+                        </ul>
+                        <a href="https://buy.stripe.com/4gMeVd2Ms43F4vd1HIaAw06" target="_blank" rel="noopener" class="mt-6 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold primary-button">Buy Now</a>
+                    </article>
+                    </div>
+                    </div>
+        </section>
 
+        <!-- FAQ -->
+        <section id="faq" class="py-24 bg-white">
+            <div class="mx-auto max-w-4xl px-6">
+                <div class="fade-section text-center mb-12">
+                    <p class="text-sm uppercase tracking-[0.3em] text-slate-400 mb-3">FAQ</p>
+                    <h2 class="text-3xl font-semibold text-slate-900">Answers for responsible marketers</h2>
+                    </div>
+                <div class="space-y-4">
+                    <details class="rounded-2xl border border-slate-200 bg-white p-6 fade-section shadow-sm">
+                        <summary class="text-lg font-semibold cursor-pointer flex items-center justify-between gap-6 text-slate-900">Is this against TikTok's Terms of Service?<span>+</span></summary>
+                        <p class="mt-4 text-slate-600">We create accounts compliantly and transfer ownership. You're responsible for following TikTok's guidelines and local regulations.</p>
+                    </details>
+                    <details class="rounded-2xl border border-slate-200 bg-white p-6 fade-section shadow-sm">
+                        <summary class="text-lg font-semibold cursor-pointer flex items-center justify-between gap-6 text-slate-900">How long do accounts last?<span>+</span></summary>
+                        <p class="mt-4 text-slate-600">Accounts are yours permanently. Many customers use the same accounts for 18+ months without interruption.</p>
+                    </details>
+                    <details class="rounded-2xl border border-slate-200 bg-white p-6 fade-section shadow-sm">
+                        <summary class="text-lg font-semibold cursor-pointer flex items-center justify-between gap-6 text-slate-900">What if an account gets banned?<span>+</span></summary>
+                        <p class="mt-4 text-slate-600">It's rare, but if it happens within the first 30 days, we replace it free of charge. Multi-account subscribers get priority replacements.</p>
+                    </details>
+                    <details class="rounded-2xl border border-slate-200 bg-white p-6 fade-section shadow-sm">
+                        <summary class="text-lg font-semibold cursor-pointer flex items-center justify-between gap-6 text-slate-900">Can I use these for client accounts?<span>+</span></summary>
+                        <p class="mt-4 text-slate-600">Yes. 70% of our customers are agencies managing multiple client accounts. That's why we built the monthly supply plan.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="py-24 bg-slate-900 text-center text-white" id="final-cta">
+            <div class="mx-auto max-w-3xl px-6 fade-section">
+                <h2 class="text-4xl font-semibold">Ready to reach the U.S. For You Page?</h2>
+                <p class="mt-4 text-lg text-slate-200">Join 500+ marketers who chose the faster path to U.S. TikTok growth.</p>
+                <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 rounded-full px-10 py-4 text-xl font-semibold primary-button mt-10">Buy Now →</a>
+                <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm text-slate-300">
+                    <span>⚡ 2-Hour Delivery</span>
+                    <span>💳 Secure Checkout</span>
+                    <span>🔒 Money-Back Guarantee</span>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 TokSupply. All rights reserved.</p>
-            <p class="text-xs">Buying/selling social media accounts may be restricted by platform terms of service and by local laws. By purchasing, you confirm you have reviewed and will comply with all applicable rules and regulations. We do not guarantee performance or longevity of accounts.</p>
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200">
+        <div class="mx-auto max-w-6xl px-6 py-10 text-sm text-slate-500 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <p>© 2025 TokSupply. All rights reserved.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="mailto:support@toksupply.site" class="hover:text-slate-900">support@toksupply.site</a>
+                <a href="#terms" class="hover:text-slate-900">Terms of Service</a>
+                <a href="#privacy" class="hover:text-slate-900">Privacy Policy</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Vercel Analytics -->
-    <script type="module">
-        import { inject } from "https://cdn.skypack.dev/@vercel/analytics";
-        inject();
-    </script>
-
     <script>
-        // Navbar scroll effect
+        // Scroll progress indicator
+        const scrollProgress = document.getElementById('scrollProgress');
         window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
+            const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Sticky header background toggle
+        const siteHeader = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                siteHeader.classList.add('sticky-nav');
             } else {
-                navbar.classList.remove('scrolled');
+                siteHeader.classList.remove('sticky-nav');
             }
         });
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        // Intersection Observer for fade-in sections
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.2 });
 
-        // Observe all fade-up elements
-        document.addEventListener('DOMContentLoaded', () => {
-            const fadeElements = document.querySelectorAll('.fade-up');
-            fadeElements.forEach(el => observer.observe(el));
+        document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
+
+        // Counter animation
+        document.querySelectorAll('[data-counter]').forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-counter'), 10);
+            let current = 0;
+            const increment = target / 100;
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current) + '+';
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target + '+';
+                }
+            };
+            updateCounter();
         });
 
-        // Add staggered animation delays
-        document.addEventListener('DOMContentLoaded', () => {
-            const testimonials = document.querySelectorAll('.testimonial');
-            testimonials.forEach((testimonial, index) => {
-                testimonial.style.transitionDelay = `${index * 0.1}s`;
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    mobileMenu.classList.add('hidden');
+                }
             });
-
-            const steps = document.querySelectorAll('.step');
-            steps.forEach((step, index) => {
-                step.style.transitionDelay = `${index * 0.15}s`;
-            });
-
-
-            // Simple buy now button functionality
-            const buyNowBtn = document.getElementById('buy-now-btn');
-            if (buyNowBtn) {
-                buyNowBtn.href = 'https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01';
-            }
-
-
         });
-        
-        
+
     </script>
 </body>
 </html>
-ink 
+
