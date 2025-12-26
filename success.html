@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful — TokSupply</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            950: '#020617',
+                            900: '#0F172A',
+                            800: '#1E293B'
+                        },
+                        brand: {
+                            primary: '#4F46E5',
+                            accent: '#7C3AED',
+                            success: '#10B981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-feature-settings: 'cv02','cv03','cv04';
+            background: #ffffff;
+        }
+        .primary-button {
+            background: linear-gradient(120deg, #4F46E5, #7C3AED);
+            color: #fff;
+            box-shadow: 0 18px 45px rgba(99,102,241,0.25);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 25px 55px rgba(99,102,241,0.3);
+        }
+        @keyframes checkmark {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .checkmark-animation {
+            animation: checkmark 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased">
+    <!-- Header -->
+    <header class="border-b border-slate-200 bg-white">
+        <div class="mx-auto max-w-6xl px-6 py-5">
+            <a href="index.html" class="flex items-center gap-3 text-slate-900 font-semibold tracking-tight">
+                <img src="logo.png" alt="TokSupply" class="h-10 w-auto">
+                TokSupply
+            </a>
+        </div>
+    </header>
+
+    <main class="min-h-screen flex items-center justify-center px-6 py-24 bg-gradient-to-b from-white to-slate-50">
+        <div class="max-w-lg w-full">
+            <!-- Success Card -->
+            <div class="bg-white rounded-3xl border border-slate-200 shadow-lg p-8 md:p-10 text-center">
+                <!-- Success Icon -->
+                <div class="mx-auto flex items-center justify-center h-24 w-24 rounded-full bg-emerald-100 mb-6 checkmark-animation">
+                    <svg class="h-12 w-12 text-emerald-600" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+
+                <!-- Success Message -->
+                <h1 class="text-3xl md:text-4xl font-semibold text-slate-900 mb-4">Payment Successful!</h1>
+                <p class="text-lg text-slate-600 mb-2">Thank you for your purchase.</p>
+                <p class="text-slate-500 mb-8">Your TikTok account credentials will be delivered to your email within 2 hours.</p>
+
+                <!-- What's Next -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6 mb-8 text-left">
+                    <h2 class="font-semibold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 text-sm">⚡</span>
+                        What's Next?
+                    </h2>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-500 mt-0.5 font-bold">✓</span>
+                            <span>Check your email (including spam folder) for account credentials</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-500 mt-0.5 font-bold">✓</span>
+                            <span>You'll receive login details within 2 hours</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-500 mt-0.5 font-bold">✓</span>
+                            <span>Start posting immediately after receiving your account</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-semibold primary-button">
+                        Return to Home
+                    </a>
+                    <a href="mailto:support@toksupply.site" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-semibold border border-slate-200 text-slate-700 hover:border-slate-400 hover:bg-slate-50 transition">
+                        Contact Support
+                    </a>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="mt-8 pt-8 border-t border-slate-200 flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+                    <span class="flex items-center gap-1">
+                        <svg class="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Secure Payment
+                    </span>
+                    <span class="flex items-center gap-1">
+                        <svg class="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        2-Hour Delivery
+                    </span>
+                    <span class="flex items-center gap-1">
+                        <svg class="h-4 w-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Money-Back Guarantee
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200">
+        <div class="mx-auto max-w-6xl px-6 py-10 text-sm text-slate-500 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <p>© 2025 TokSupply. All rights reserved.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="mailto:support@toksupply.site" class="hover:text-slate-900">support@toksupply.site</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

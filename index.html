@@ -184,7 +184,7 @@
                         Get 100K+ Views on Your Next TikTok Video
                     </h1>
                     <p class="mt-6 text-lg text-slate-600 max-w-xl">
-                        Stop getting 200 views from the wrong audience. With TokSupply you post using verified U.S. accounts, plug straight into the American algorithm, and reach buyers who actually convert.
+                        Stop getting 200 views from the wrong audience. With TokSupply, your videos get shown to the American algorithm and reach buyers who actually convert.
                     </p>
                     <div class="mt-8 flex flex-col sm:flex-row gap-4">
                         <a href="https://buy.stripe.com/8x26oHaeU57J7Hp866aAw01" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-lg font-semibold primary-button">
@@ -418,7 +418,7 @@
                     <article class="rounded-3xl border border-slate-200 bg-white p-8 fade-section shadow-card">
                         <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 text-lg font-semibold mb-6">3</div>
                         <h3 class="text-2xl font-semibold mb-3 text-slate-900">Scale</h3>
-                        <p class="text-slate-600">Start posting immediately. Track views, leads, and sales from U.S. buyers.</p>
+                        <p class="text-slate-600">Start posting immediately without needing a VPN, proxy, etc.</p>
                     </article>
                 </div>
             </div>
@@ -477,7 +477,7 @@
                         <div class="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-4 py-1 text-sm font-semibold text-emerald-600 mb-6">Best Value</div>
                         <h3 class="text-2xl font-semibold text-slate-900 mb-2">Monthly Agency Supply</h3>
                         <p class="text-4xl font-semibold text-slate-900">$99<span class="text-lg font-normal text-slate-500">/month</span></p>
-                        <p class="text-sm text-slate-500 mb-6">10 fresh accounts shipped every month</p>
+                        <p class="text-sm text-slate-500 mb-6">20 fresh accounts shipped every month</p>
                         <ul class="text-slate-600 space-y-3 flex-1">
                             <li class="flex items-start gap-3"><span class="text-emerald-500 pt-1">✔</span> Receive new accounts every month</li>
                             <li class="flex items-start gap-3"><span class="text-emerald-500 pt-1">✔</span> Cheaper than buying 5 accounts at $20 each</li>
@@ -545,6 +545,21 @@
     </footer>
 
     <script>
+        // Auto-update Stripe payment links with success URL
+        (function() {
+            const currentDomain = window.location.origin;
+            const successUrl = encodeURIComponent(currentDomain + '/success.html');
+            const stripeLinks = document.querySelectorAll('a[href*="buy.stripe.com"]');
+            
+            stripeLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.includes('success_url=')) {
+                    const separator = href.includes('?') ? '&' : '?';
+                    link.setAttribute('href', href + separator + 'success_url=' + successUrl);
+                }
+            });
+        })();
+
         // Scroll progress indicator
         const scrollProgress = document.getElementById('scrollProgress');
         window.addEventListener('scroll', () => {
