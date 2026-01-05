@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/tiktok-shadowban-solution",
+      "destination": "/tiktok-shadowban-solution.html"
+    },
+    {
+      "source": "/tiktok-without-vpn",
+      "destination": "/tiktok-without-vpn.html"
+    }
+  ],
+  "cleanUrls": true
+}
+
