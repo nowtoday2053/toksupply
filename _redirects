@@ -3,7 +3,9 @@
 
 /tiktok-shadowban-solution /tiktok-shadowban-solution.html 200
 /tiktok-without-vpn /tiktok-without-vpn.html 200
+/viral-guide /viral-guide.html 200
 
 # Catch-all for other .html files
 /*.html /:splat 301
+
 

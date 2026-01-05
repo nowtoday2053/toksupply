@@ -7,8 +7,13 @@
     {
       "source": "/tiktok-without-vpn",
       "destination": "/tiktok-without-vpn.html"
+    },
+    {
+      "source": "/viral-guide",
+      "destination": "/viral-guide.html"
     }
   ],
   "cleanUrls": true
 }
+
 
